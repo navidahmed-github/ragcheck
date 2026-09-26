@@ -45,7 +45,7 @@ Introduce the classic silent regression - truncating the text that gets
 embedded "to save on embedding costs":
 
 ```bash
-sed -i 's|c.text));|c.text.slice(0, 80)));|' src/pipeline.ts
+# edit src/pipeline.ts: change `c.text` to `c.text.slice(0, 80)` on the embed line
 npm run gate
 # GATE FAILED: recall@3 dropped 1 -> 0.9
 #   failing case notifiable-incident: expected [incident-reporting], got [electrical-safety, ...]
