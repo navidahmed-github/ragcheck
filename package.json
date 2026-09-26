@@ -1,0 +1,25 @@
+{
+  "name": "ragcheck",
+  "version": "0.1.0",
+  "description": "A RAG pipeline where retrieval quality is a release gate, not a vibe. Golden-set evals run in CI and block regressions before they ship.",
+  "type": "module",
+  "scripts": {
+    "ingest": "tsx src/ingest.ts",
+    "ask": "tsx src/query.ts",
+    "eval": "tsx eval/run.ts",
+    "eval:baseline": "tsx eval/run.ts --write-baseline",
+    "gate": "tsx eval/gate.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "Navid Ahmed <admin@navidahmed.com.au>",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "@types/pg": "^8.11.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

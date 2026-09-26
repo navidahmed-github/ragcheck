@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: ragcheck
+      POSTGRES_PASSWORD: ragcheck
+      POSTGRES_DB: ragcheck
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ragcheck"]
+      interval: 5s
+      timeout: 3s
+      retries: 10

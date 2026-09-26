@@ -1,0 +1,106 @@
+{
+  "description": "Golden retrieval set. Each case is a question a real user would ask, with the document that must appear in the top-k results. Cases are added from production failures: every retrieval bug becomes a case here before it is fixed, the same way a code bug becomes a regression test.",
+  "k": 3,
+  "cases": [
+    {
+      "id": "harness-inspection-interval",
+      "query": "how often does a harness need a detailed inspection",
+      "expectedDoc": "working-at-heights"
+    },
+    {
+      "id": "harness-after-fall",
+      "query": "can I keep using a harness after it has arrested a fall",
+      "expectedDoc": "working-at-heights"
+    },
+    {
+      "id": "rescue-plan",
+      "query": "do we need a rescue plan when using fall arrest",
+      "expectedDoc": "working-at-heights"
+    },
+    {
+      "id": "anchor-rating",
+      "query": "what load rating does a fall arrest anchor point need",
+      "expectedDoc": "working-at-heights"
+    },
+    {
+      "id": "permit-to-dig-validity",
+      "query": "how long is a permit to dig valid for",
+      "expectedDoc": "excavation-permits"
+    },
+    {
+      "id": "trench-depth-shoring",
+      "query": "at what trench depth is shoring or benching required",
+      "expectedDoc": "excavation-permits"
+    },
+    {
+      "id": "trench-inspection-after-rain",
+      "query": "does a trench need to be inspected again after rainfall",
+      "expectedDoc": "excavation-permits"
+    },
+    {
+      "id": "scaffold-inspection-frequency",
+      "query": "how often must a scaffold be inspected while in service",
+      "expectedDoc": "scaffold-inspection"
+    },
+    {
+      "id": "scaffold-handover",
+      "query": "when can workers start using a new scaffold",
+      "expectedDoc": "scaffold-inspection"
+    },
+    {
+      "id": "mobile-scaffold-castors",
+      "query": "rules for moving a mobile scaffold with castors",
+      "expectedDoc": "scaffold-inspection"
+    },
+    {
+      "id": "notifiable-incident",
+      "query": "who reports a notifiable incident to the regulator and when",
+      "expectedDoc": "incident-reporting"
+    },
+    {
+      "id": "near-miss",
+      "query": "do near misses have to be reported",
+      "expectedDoc": "incident-reporting"
+    },
+    {
+      "id": "injury-classification",
+      "query": "difference between LTI MTI and first aid injury classification",
+      "expectedDoc": "incident-reporting"
+    },
+    {
+      "id": "helmet-replacement",
+      "query": "when do safety helmets have to be replaced",
+      "expectedDoc": "ppe-standard"
+    },
+    {
+      "id": "silica-respirator",
+      "query": "what respirator is needed for cutting concrete silica dust",
+      "expectedDoc": "ppe-standard"
+    },
+    {
+      "id": "hearing-protection-threshold",
+      "query": "at what noise level is hearing protection mandatory",
+      "expectedDoc": "ppe-standard"
+    },
+    {
+      "id": "test-and-tag-interval",
+      "query": "how often must leads be tested and tagged on a construction site",
+      "expectedDoc": "electrical-safety"
+    },
+    {
+      "id": "rcd-daily-test",
+      "query": "how often should portable RCDs be push button tested",
+      "expectedDoc": "electrical-safety"
+    },
+    {
+      "id": "overhead-lines-exclusion",
+      "query": "can an excavator work near overhead power lines",
+      "expectedDoc": "electrical-safety"
+    },
+    {
+      "id": "double-adaptor",
+      "query": "are double adaptors allowed on site",
+      "expectedDoc": "electrical-safety"
+    }
+  ]
+}

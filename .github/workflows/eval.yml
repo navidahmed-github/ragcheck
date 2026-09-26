@@ -1,0 +1,25 @@
+name: retrieval-quality-gate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Retrieval quality gate
+        # Deterministic local embedder + in-memory store: the gate runs on
+        # every PR with no API keys and no infrastructure, and the numbers
+        # are reproducible to the digit. QA lives inside the release
+        # process, not beside it.
+        run: npm run gate
