@@ -2,7 +2,7 @@
   "embedder": "local-hash-v1",
   "store": "memory",
   "k": 3,
-  "cases": 20,
+  "cases": 21,
   "recallAtK": 1,
-  "mrr": 0.975
+  "mrr": 0.9762
 }

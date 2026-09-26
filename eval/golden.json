@@ -101,6 +101,11 @@
       "id": "double-adaptor",
       "query": "are double adaptors allowed on site",
       "expectedDoc": "electrical-safety"
+    },
+    {
+      "id": "spoil-distance",
+      "query": "how far from the trench edge does spoil need to be placed",
+      "expectedDoc": "excavation-permits"
     }
   ]
 }
